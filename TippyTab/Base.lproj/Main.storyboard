@@ -1,25 +1,176 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="TippyTab" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="oaw-OF-9ba">
+                                <rect key="frame" x="16" y="64" width="288" height="29"/>
+                                <segments>
+                                    <segment title="List"/>
+                                    <segment title="Calculator"/>
+                                </segments>
+                                <color key="tintColor" red="0.053149489649999999" green="0.2784571723" blue="0.58745908309999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segmentedViewPressed:" destination="vXZ-lx-hvc" eventType="valueChanged" id="JhF-e6-rsl"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQy-Zy-X2c">
+                                <rect key="frame" x="284" y="28" width="20" height="22"/>
+                                <state key="normal" image="089. Settings">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUU-nx-jJn">
+                                <rect key="frame" x="16" y="113" width="288" height="30"/>
+                                <color key="tintColor" red="0.090196078431372548" green="0.20000000000000001" blue="0.51764705882352946" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="15%">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showOptionsViewController:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jfm-mM-JFM"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vUU-nx-jJn" firstAttribute="trailing" secondItem="oaw-OF-9ba" secondAttribute="trailing" id="37A-Ji-lts"/>
+                            <constraint firstItem="oaw-OF-9ba" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="JqR-se-qTW"/>
+                            <constraint firstItem="oaw-OF-9ba" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="byl-Gy-MAH"/>
+                            <constraint firstItem="tQy-Zy-X2c" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="e8n-SG-plC"/>
+                            <constraint firstItem="vUU-nx-jJn" firstAttribute="top" secondItem="oaw-OF-9ba" secondAttribute="bottom" constant="21" id="gkd-8g-hK2"/>
+                            <constraint firstItem="oaw-OF-9ba" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="44" id="u3q-O7-crz"/>
+                            <constraint firstItem="tQy-Zy-X2c" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="yHd-3R-JhE"/>
+                            <constraint firstItem="vUU-nx-jJn" firstAttribute="leading" secondItem="oaw-OF-9ba" secondAttribute="leading" id="zv3-xF-ngt"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="percentageButton" destination="vUU-nx-jJn" id="tLJ-mf-tv3"/>
+                        <outlet property="sementedView" destination="oaw-OF-9ba" id="Tty-Io-d6l"/>
+                        <segue destination="ZBe-R1-78l" kind="custom" identifier="idFirstSegue" customClass="FirstCustomSegue" customModule="TippyTab" customModuleProvider="target" id="MDK-K5-54p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-549" y="365"/>
+        </scene>
+        <!--Options View Controller-->
+        <scene sceneID="LLr-Fc-aLv">
+            <objects>
+                <viewController id="ZBe-R1-78l" customClass="OptionsViewController" customModule="TippyTab" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rx2-3L-NiQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fpo-EU-okz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bVw-N4-3Sc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YMA-xQ-itH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-153" y="365"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LoB-Jn-uEf">
+            <objects>
+                <viewController id="6WQ-gI-QGv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="itR-b2-7dA"/>
+                        <viewControllerLayoutGuide type="bottom" id="lpb-SB-MRb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IEa-DG-UTp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hY6-MY-DFP">
+                                <rect key="frame" x="1" y="203" width="318" height="90"/>
+                                <color key="backgroundColor" red="0.053149489649999999" green="0.2784571723" blue="0.58745908309999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="k2x-Yc-xLx" appends="YES" id="Esj-pi-SmZ"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g4Y-dY-go7">
+                                <rect key="frame" x="1" y="294" width="318" height="90"/>
+                                <color key="backgroundColor" red="0.053149489649999999" green="0.2784571723" blue="0.58745908309999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="kXE-Ip-FrO" appends="YES" id="cH5-75-uUv"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WkM-RZ-LJd">
+                                <rect key="frame" x="1" y="385" width="318" height="90"/>
+                                <color key="backgroundColor" red="0.053149489649999999" green="0.2784571723" blue="0.58745908309999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="JGO-zE-FtM" appends="YES" id="QOr-gM-LdR"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M3x-34-12N">
+                                <rect key="frame" x="1" y="476" width="318" height="90"/>
+                                <color key="backgroundColor" red="0.053149489649999999" green="0.2784571723" blue="0.58745908309999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="hae-o8-Ilq" appends="YES" id="3WX-4N-MJe"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thd-Nj-Bk9">
+                                <rect key="frame" x="66" y="28" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HOe-O5-Czu">
+                                <rect key="frame" x="1" y="112" width="318" height="90"/>
+                                <color key="backgroundColor" red="0.053149489649999999" green="0.2784571723" blue="0.58745908309999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="zlC-Li-uZs" appends="YES" id="BTl-Ev-BrT"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="sizeLabel" destination="Thd-Nj-Bk9" id="J8o-Pz-CAh"/>
+                        <outlet property="view1" destination="HOe-O5-Czu" id="rAR-iL-vOU"/>
+                        <outlet property="view2" destination="hY6-MY-DFP" id="iYU-QB-wBz"/>
+                        <outlet property="view3" destination="g4Y-dY-go7" id="Jw2-Uy-yWc"/>
+                        <outlet property="view4" destination="WkM-RZ-LJd" id="wlc-37-mUx"/>
+                        <outlet property="view5" destination="M3x-34-12N" id="1sH-vR-O7Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZIC-Ab-DyE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="zlC-Li-uZs"/>
+                <tapGestureRecognizer id="k2x-Yc-xLx"/>
+                <tapGestureRecognizer id="kXE-Ip-FrO"/>
+                <tapGestureRecognizer id="JGO-zE-FtM"/>
+                <tapGestureRecognizer id="hae-o8-Ilq"/>
+            </objects>
+            <point key="canvasLocation" x="270" y="365"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="089. Settings" width="20" height="20"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

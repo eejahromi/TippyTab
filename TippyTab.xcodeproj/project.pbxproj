@@ -13,6 +13,8 @@
 		7C18BEA01B4CE96C002023DF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C18BE9F1B4CE96C002023DF /* Images.xcassets */; };
 		7C18BEA31B4CE96C002023DF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C18BEA11B4CE96C002023DF /* LaunchScreen.xib */; };
 		7C18BEAF1B4CE96C002023DF /* TippyTabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C18BEAE1B4CE96C002023DF /* TippyTabTests.swift */; };
+		7C18BEB91B4CF73E002023DF /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C18BEB81B4CF73E002023DF /* OptionsViewController.swift */; };
+		7C18BF551B4F8F92002023DF /* FirstCustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C18BF541B4F8F92002023DF /* FirstCustomSegue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		7C18BEA81B4CE96C002023DF /* TippyTabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TippyTabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C18BEAD1B4CE96C002023DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C18BEAE1B4CE96C002023DF /* TippyTabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TippyTabTests.swift; sourceTree = "<group>"; };
+		7C18BEB81B4CF73E002023DF /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		7C18BF541B4F8F92002023DF /* FirstCustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCustomSegue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				7C18BE9F1B4CE96C002023DF /* Images.xcassets */,
 				7C18BEA11B4CE96C002023DF /* LaunchScreen.xib */,
 				7C18BE961B4CE96C002023DF /* Supporting Files */,
+				7C18BEB81B4CF73E002023DF /* OptionsViewController.swift */,
+				7C18BF541B4F8F92002023DF /* FirstCustomSegue.swift */,
 			);
 			path = TippyTab;
 			sourceTree = "<group>";
@@ -212,6 +218,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C18BEB91B4CF73E002023DF /* OptionsViewController.swift in Sources */,
+				7C18BF551B4F8F92002023DF /* FirstCustomSegue.swift in Sources */,
 				7C18BE9B1B4CE96C002023DF /* ViewController.swift in Sources */,
 				7C18BE991B4CE96C002023DF /* AppDelegate.swift in Sources */,
 			);
@@ -409,6 +417,7 @@
 				7C18BEB41B4CE96C002023DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C18BEB51B4CE96C002023DF /* Build configuration list for PBXNativeTarget "TippyTabTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +426,7 @@
 				7C18BEB71B4CE96C002023DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
